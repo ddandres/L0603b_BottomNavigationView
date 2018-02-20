@@ -3,7 +3,7 @@
   -->
 
 <resources>
-    <string name="app_name">L06.03_NavigationDrawer</string>
+    <string name="app_name">L06.03b_BottomNavigationView</string>
     <!--Strings related to the DashboardActivity-->
     <string name="button_view_pager">Just a View Pager</string>
     <string name="button_view_pager_title_strip">View Pager with Title Strip</string>
@@ -29,7 +29,4 @@
     <string name="title_list_fragment">List String</string>
     <string name="title_grid_fragment">Grid Image</string>
     <string name="title_activity_main">MainActivity</string>
-    <!--Strings related to the NavigationDrawer-->
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
