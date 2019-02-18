@@ -2,7 +2,7 @@
  * Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
  */
 
-package labs.sdm.l0603b_bottomnavigationview.activities;
+package labs.dadm.l0603b_bottomnavigationview.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,11 +11,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import labs.sdm.l0603b_bottomnavigationview.R;
-import labs.sdm.l0603b_bottomnavigationview.fragments.GridImageFragment;
-import labs.sdm.l0603b_bottomnavigationview.fragments.ListStringFragment;
-import labs.sdm.l0603b_bottomnavigationview.fragments.LogInFragment;
-import labs.sdm.l0603b_bottomnavigationview.fragments.SignInFragment;
+import labs.dadm.l0603b_bottomnavigationview.R;
+import labs.dadm.l0603b_bottomnavigationview.fragments.GridImageFragment;
+import labs.dadm.l0603b_bottomnavigationview.fragments.ListStringFragment;
+import labs.dadm.l0603b_bottomnavigationview.fragments.LogInFragment;
+import labs.dadm.l0603b_bottomnavigationview.fragments.SignInFragment;
 
 /**
  * Provides access to different Fragments by means of a NavigationDrawer.
