@@ -5,11 +5,13 @@
 package labs.dadm.l0603b_bottomnavigationview.activities;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import labs.dadm.l0603b_bottomnavigationview.R;
 import labs.dadm.l0603b_bottomnavigationview.fragments.GridImageFragment;
