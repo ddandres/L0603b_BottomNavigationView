@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import labs.dadm.l0603b_bottomnavigationview.R;
@@ -86,7 +87,7 @@ public class LogInFragment extends Fragment {
      * This method is executed when the fragment is created to populate the ActionBar with actions.
      */
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public void onCreateOptionsMenu(@NonNull Menu menu, MenuInflater inflater) {
         // Generate the Menu object from the XML resource file
         inflater.inflate(R.menu.menu_login, menu);
     }
