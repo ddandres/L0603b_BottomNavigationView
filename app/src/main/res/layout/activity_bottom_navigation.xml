@@ -10,8 +10,8 @@
     tools:context="labs.dadm.l0603b_bottomnavigationview.activities.BottomNavigationActivity">
 
     <!--Container that will display the rest of elements on the screen-->
-    <FrameLayout
-        android:id="@+id/frameLayout"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcvLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -31,7 +31,7 @@
         android:background="@color/colorPrimaryDark"
         app:itemIconTint="@color/color_bottom_navigation"
         app:itemTextColor="@color/color_bottom_navigation"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/fcvLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu_bottom_navigation" />

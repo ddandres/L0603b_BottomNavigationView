@@ -37,9 +37,13 @@ public class BottomNavigationActivity extends AppCompatActivity implements Botto
         // If the activity is being created for the first time, then display the LoginFragment,
         // otherwise let the system recreate whatever was being displayed previously
         if (savedInstanceState == null) {
+            final Bundle bundle = new Bundle();
+            bundle.putString("username", "David");
+
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frameLayout, new LogInFragment())
+                    .setReorderingAllowed(true)
+                    .replace(R.id.fcvLayout, LogInFragment.class, bundle)
                     .commit();
         }
 
@@ -53,62 +57,44 @@ public class BottomNavigationActivity extends AppCompatActivity implements Botto
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        Fragment fragment = null;
-        String tag = null;
+        Class<? extends Fragment> fragment = null;
+        Bundle bundle = null;
 
         // Determine the action to take place according to the Id of the action selected
         final int selectedItem = item.getItemId();
         if (selectedItem == R.id.mLoginNavigation) {
             // Display LogInFragment
-
-            // Get or create a new LogInFragment
-            tag = "login";
-            fragment = getSupportFragmentManager().findFragmentByTag(tag);
-            if (fragment == null) {
-                fragment = LogInFragment.newInstance("David");
-            }
+            fragment = LogInFragment.class;
+            // Set the information to pass an initial username to the Fragment
+            bundle = new Bundle();
+            bundle.putString("username", "David");
             // Display the LogInFragment title on the ActionBar
             getSupportActionBar().setTitle(R.string.title_login_fragment);
         } else if (selectedItem == R.id.mSignInNavigation) {
             // Display SignInFragment
-
-            // Get or create a new SignInFragment
-            tag = "signin";
-            fragment = getSupportFragmentManager().findFragmentByTag(tag);
-            if (fragment == null) {
-                fragment = new SignInFragment();
-            }
+            fragment = SignInFragment.class;
             // Display the SignInFragment title on the ActionBar
             getSupportActionBar().setTitle(R.string.title_signin_fragment);
         } else if (selectedItem == R.id.mListNavigation) {
             // Display ListStringFragment
-
-            // Get or create a new ListStringFragment
-            tag = "list";
-            fragment = getSupportFragmentManager().findFragmentByTag(tag);
-            if (fragment == null) {
-                fragment = new ListStringFragment();
-            }
+            fragment = ListStringFragment.class;
             // Display the ListStringFragment title on the ActionBar
             getSupportActionBar().setTitle(R.string.title_list_fragment);
         } else if (selectedItem == R.id.mGridNavigation) {
             // Display GridViewFragment
-
-            // Get or create a new GridViewFragment
-            tag = "grid";
-            fragment = getSupportFragmentManager().findFragmentByTag(tag);
-            if (fragment == null) {
-                fragment = new GridImageFragment();
-            }
+            fragment = GridImageFragment.class;
             // Display the GridViewFragment title on the ActionBar
             getSupportActionBar().setTitle(R.string.title_grid_fragment);
         }
 
-        // Replace the existing Fragment by the new one
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.frameLayout, fragment, tag)
-                .commit();
+        if (fragment != null) {
+            // Replace the existing Fragment by the new one
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .setReorderingAllowed(true)
+                    .replace(R.id.fcvLayout, fragment, bundle)
+                    .commit();
+        }
 
         return true;
     }
