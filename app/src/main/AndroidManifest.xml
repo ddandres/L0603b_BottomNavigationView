@@ -7,7 +7,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="labs.dadm.l0603b_bottomnavigationview.activities.BottomNavigationActivity">
+        <activity
+            android:name="labs.dadm.l0603b_bottomnavigationview.activities.BottomNavigationActivity"
+            android:exported="true">
             <!-- This is the entry point to the application -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

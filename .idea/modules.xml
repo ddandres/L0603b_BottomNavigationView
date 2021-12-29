@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L06.03b_BottomNavigationView.iml" filepath="$PROJECT_DIR$/.idea/modules/L06.03b_BottomNavigationView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/L06.03b_BottomNavigationView.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/L06.03b_BottomNavigationView.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L0603b_BottomNavigationView.iml" filepath="$PROJECT_DIR$/.idea/modules/L0603b_BottomNavigationView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/L0603b_BottomNavigationView.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/L0603b_BottomNavigationView.app.iml" />
     </modules>
   </component>
 </project>
